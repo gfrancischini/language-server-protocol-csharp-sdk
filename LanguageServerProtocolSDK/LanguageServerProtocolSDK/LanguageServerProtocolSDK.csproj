@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9502770B-B34F-408D-AD0F-6E5B28D630A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LanguageServerProtocolSDK</RootNamespace>
+    <AssemblyName>LanguageServerProtocolSDK</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="JsonRpc\JsonRpcError.cs" />
+    <Compile Include="JsonRpc\JsonRpcMessage.cs" />
+    <Compile Include="JsonRpc\JsonRpcRequest.cs" />
+    <Compile Include="JsonRpc\JsonRpcResponse.cs" />
+    <Compile Include="JsonRpc\JsonRpcServer.cs" />
+    <Compile Include="JsonRpc\JsonRpcErrorCodes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protocol\Document\CompletionItemResult.cs" />
+    <Compile Include="Protocol\ErrorsMessage.cs" />
+    <Compile Include="Protocol\General\CancelParams.cs" />
+    <Compile Include="Protocol\Workspace\ApplyWorkspaceEditParams.cs" />
+    <Compile Include="Protocol\Base\BaseParams.cs" />
+    <Compile Include="Protocol\Base\BaseResult.cs" />
+    <Compile Include="Types\IsItAType\ClientCapabilities.cs" />
+    <Compile Include="Protocol\Document\CodeActionParams.cs" />
+    <Compile Include="Types\IsItAType\CodeLensOptions.cs" />
+    <Compile Include="Protocol\Document\CodeLensParams.cs" />
+    <Compile Include="Protocol\CommandType.cs" />
+    <Compile Include="Types\IsItAType\CompletionOptions.cs" />
+    <Compile Include="Protocol\Workspace\DidChangeConfigurationParams.cs" />
+    <Compile Include="Protocol\ResponseErrorException.cs" />
+    <Compile Include="Protocol\Document\DidChangeTextDocumentParams.cs" />
+    <Compile Include="Protocol\Workspace\DidChangeWatchedFilesParams.cs" />
+    <Compile Include="Protocol\Document\DidCloseTextDocumentParams .cs" />
+    <Compile Include="Protocol\Document\DidOpenTextDocumentParams.cs" />
+    <Compile Include="Protocol\Document\DidSaveTextDocumentParams.cs" />
+    <Compile Include="Types\IsItAType\DocumentFilter.cs" />
+    <Compile Include="Protocol\Document\DocumentFormattingParams.cs" />
+    <Compile Include="Types\IsItAType\DocumentLinkOptions.cs" />
+    <Compile Include="Protocol\Document\DocumentLinkParams.cs" />
+    <Compile Include="Types\IsItAType\DocumentOnTypeFormattingOptions.cs" />
+    <Compile Include="Protocol\Document\DocumentOnTypeFormattingParams.cs" />
+    <Compile Include="Protocol\Document\DocumentRangeFormattingParams.cs" />
+    <Compile Include="Types\IsItAType\DocumentSelector.cs" />
+    <Compile Include="Types\IsItAType\ExecuteCommandOptions.cs" />
+    <Compile Include="Protocol\Workspace\ExecuteCommandParams.cs" />
+    <Compile Include="Types\IsItAType\FileChangeType.cs" />
+    <Compile Include="Types\IsItAType\FileEvent.cs" />
+    <Compile Include="Protocol\General\InitializeErrorEnum.cs" />
+    <Compile Include="Protocol\General\InitializeError.cs" />
+    <Compile Include="Protocol\General\InitializeParams.cs" />
+    <Compile Include="Protocol\General\InitializeResult.cs" />
+    <Compile Include="Protocol\LanguageServerProtocol.cs" />
+    <Compile Include="Protocol\Window\LogMessageParams.cs" />
+    <Compile Include="Protocol\Window\MessageActionItem.cs" />
+    <Compile Include="Protocol\Window\MessageType.cs" />
+    <Compile Include="Protocol\Document\PublishDiagnosticsParams.cs" />
+    <Compile Include="Types\IsItAType\Registration.cs" />
+    <Compile Include="Protocol\Window\RegistrationParams.cs" />
+    <Compile Include="Protocol\Document\RenameParams.cs" />
+    <Compile Include="Types\IsItAType\SaveOptions.cs" />
+    <Compile Include="Types\IsItAType\ServerCapabilities.cs" />
+    <Compile Include="Protocol\Window\ShowMessageParams.cs" />
+    <Compile Include="Protocol\Window\ShowMessageRequestParams.cs" />
+    <Compile Include="Types\IsItAType\SignatureHelpOptions.cs" />
+    <Compile Include="Types\IsItAType\TextDocumentChangeRegistrationOptions.cs" />
+    <Compile Include="Types\IsItAType\TextDocumentClientCapabilities.cs" />
+    <Compile Include="Protocol\Document\TextDocumentHoverResult.cs" />
+    <Compile Include="Protocol\Document\TextDocumentPositionParams.cs" />
+    <Compile Include="Types\IsItAType\TextDocumentRegistrationOptions.cs" />
+    <Compile Include="Types\IsItAType\TextDocumentSyncKind.cs" />
+    <Compile Include="Types\IsItAType\TextDocumentSyncOptions.cs" />
+    <Compile Include="Protocol\Document\TextDocumentCompletionResult.cs" />
+    <Compile Include="Protocol\Document\TextDocumentDefinitionResult.cs" />
+    <Compile Include="Protocol\Document\TextDocumentFormattingResult.cs" />
+    <Compile Include="Types\IsItAType\Unregistration.cs" />
+    <Compile Include="Protocol\Window\UnregistrationParams.cs" />
+    <Compile Include="Protocol\Document\WillSaveTextDocumentParams.cs" />
+    <Compile Include="Types\IsItAType\WorkspaceClientCapabilites.cs" />
+    <Compile Include="Types\CodeActionContext.cs" />
+    <Compile Include="Types\CodeLens.cs" />
+    <Compile Include="Types\Command.cs" />
+    <Compile Include="Types\CompletionItem.cs" />
+    <Compile Include="Types\CompletionItemKind.cs" />
+    <Compile Include="Types\CompletionList.cs" />
+    <Compile Include="Types\Diagnostic.cs" />
+    <Compile Include="Types\DiagnosticSeverity.cs" />
+    <Compile Include="Types\DocumentHighlight.cs" />
+    <Compile Include="Types\DocumentHighlightKind.cs" />
+    <Compile Include="Types\DocumentLink.cs" />
+    <Compile Include="Types\DocumentSymbolParams.cs" />
+    <Compile Include="Types\FormattingOptions.cs" />
+    <Compile Include="Types\FullTextDocument.cs" />
+    <Compile Include="Types\Hover.cs" />
+    <Compile Include="Types\InsertTextFormat.cs" />
+    <Compile Include="Types\Location.cs" />
+    <Compile Include="Types\MarkedString.cs" />
+    <Compile Include="Types\NotificationMessage.cs" />
+    <Compile Include="Types\ParameterInformation.cs" />
+    <Compile Include="Types\Position.cs" />
+    <Compile Include="Types\Range.cs" />
+    <Compile Include="Types\ReferenceContext.cs" />
+    <Compile Include="Types\SignatureHelp.cs" />
+    <Compile Include="Types\SignatureInformation.cs" />
+    <Compile Include="Types\SymbolInformation.cs" />
+    <Compile Include="Types\SymbolKind.cs" />
+    <Compile Include="Types\TextDocument.cs" />
+    <Compile Include="Types\TextDocumentChangeEvent.cs" />
+    <Compile Include="Types\TextDocumentContentChangeEvent.cs" />
+    <Compile Include="Types\TextDocumentEdit.cs" />
+    <Compile Include="Types\TextDocumentIdentifier.cs" />
+    <Compile Include="Types\TextDocumentItem.cs" />
+    <Compile Include="Types\TextDocumentPosition.cs" />
+    <Compile Include="Types\TextDocumentSaveReason.cs" />
+    <Compile Include="Types\TextDocumentWillSaveEvent.cs" />
+    <Compile Include="Types\TextEdit.cs" />
+    <Compile Include="Types\VersionedTextDocumentIdentifier.cs" />
+    <Compile Include="Types\WorkspaceEdit.cs" />
+    <Compile Include="Protocol\Workspace\WorkspaceSymbolParams.cs" />
+    <Compile Include="Utils\ByteBuffer.cs" />
+    <Compile Include="Utils\Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

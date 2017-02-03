@@ -1,0 +1,33 @@
+﻿{
+    "result": {
+        "capabilities": {
+            "textDocumentSync": 1,
+            "hoverProvider": true,
+            "completionProvider": {
+                "resolveProvider": true,
+                "triggerCharacters": [ ]
+            },
+            "signatureHelpProvider": {
+                "triggerCharacters": [ ]
+            },
+            "definitionProvider": true,
+            "referencesProvider": true,
+            "documentHighlightProvider": true,
+            "documentSymbolProvider": true,
+            "workspaceSymbolProvider": true,
+            "codeActionProvider": true,
+            "codeLensProvider": {
+                "resolveProvider": true
+            },
+            "documentFormattingProvider": true,
+            "documentRangeFormattingProvider": true,
+            "documentOnTypeFormattingProvider": {
+                "firstTriggerCharacter": "A",
+                "moreTriggerCharacter": [ ]
+            },
+            "renameProvider": true
+        }
+    },
+    "id": 0,
+    "jsonrpc": "2.0"
+}

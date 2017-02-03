@@ -1,0 +1,1 @@
+﻿{ "jsonrpc": "2.0", "id": 1, "method": "textDocument/completion", "params": { "textDocument": { "uri": "file:///c%3A/TFS/SWProjects/HuntBrothersPizza/Source%20Code/Main/Mobile/MobileApps/mSeriesAppsTemplates/Modules/Payments/UI/ScreenPaymentsDetailHeader.xml" }, "position": { "line": 89, "character": 18 } } }

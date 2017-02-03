@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LanguageServerProtocolSDK.Types
+{
+    /// <summary>
+    /// Defines how the host (editor) should sync document changes to the language server.
+    /// </summary>
+    public enum TextDocumentSyncKind
+    {
+        /// <summary>
+        /// Documents should not be synced at all.
+        /// </summary>
+        None = 0,
+        /// <summary>
+        /// Documents are synced by always sending the full content of the document.
+        /// </summary>
+        Full = 1,
+        /// <summary>
+        /// Documents are synced by sending the full content on open. After that only incremental 
+        /// updates to the document are sent.
+        /// </summary>
+        Incremental = 2
+    }
+}

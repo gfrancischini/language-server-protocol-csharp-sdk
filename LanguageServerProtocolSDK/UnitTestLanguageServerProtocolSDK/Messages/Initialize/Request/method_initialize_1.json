@@ -1,0 +1,11 @@
+﻿{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "method": "initialize",
+    "params": {
+        "processId": 12036,
+        "rootPath": "c:\\TFS\\SWProjects\\HuntBrothersPizza\\Source Code\\Main\\Mobile\\MobileApps",
+        "capabilities": { },
+        "trace": "off"
+    }
+}
